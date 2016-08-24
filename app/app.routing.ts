@@ -1,9 +1,11 @@
-import {provideRouter, RouterConfig}  from '@angular/router';
+import { Routes, RouterModule }   from '@angular/router';
+
 import {Per10Component} from './per10.component';
 import {FullComponent} from './full.component';
 import {SDNComponent} from './sdn.component';
 import {PayComponent} from './pay.component';
-const routes: RouterConfig = [
+
+const routes: Routes = [
   {
     path: '',
     redirectTo: '/full',
@@ -27,6 +29,8 @@ const routes: RouterConfig = [
   }
 ];
 
-export const appRouterProviders = [
-  provideRouter(routes)
+const appRoutes: Routes = [
+  ...routes
 ];
+
+export const routing = RouterModule.forRoot(appRoutes);
