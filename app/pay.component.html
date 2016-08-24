@@ -6,17 +6,17 @@
 <form>
   <div class="form-group">
     <label>Card Number</label>
-    <input [(ngModel)]="card.cardNumber" type="text" size="20">
+    <input [(ngModel)]="card.cardNumber" name="cardNumber" type="text" size="20">
   </div>
   <div class="form-group">
     <label>Expiration (MM/YY)</label>
-    <input [(ngModel)]="card.expMM" type="text" size="2">
+    <input [(ngModel)]="card.expMM" name="expMM" type="text" size="2">
     /
-    <input [(ngModel)]="card.expYY" type="text" size="2">
+    <input [(ngModel)]="card.expYY" name="expYY" type="text" size="2">
   </div>
   <div class="form-group">
     <label>CVC</label>
-    <input [(ngModel)]="card.CVC" type="text" size="4">
+    <input [(ngModel)]="card.CVC" name="CVC" type="text" size="4">
   </div>
   <input (click)="submit()" type="submit" class="btn btn-primary" value="Submit Payment">
 </form>
