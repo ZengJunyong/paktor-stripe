@@ -11,7 +11,7 @@
     <td *ngFor="let payment of payments">
       S${{payment.amount}}
       <br>
-      <input type="image" src="app/images/buy-now.gif">
+      <input (click)="choosePayment(payment)" type="image" src="app/images/buy-now.gif">
     </td>
   </tr>
   <tr>

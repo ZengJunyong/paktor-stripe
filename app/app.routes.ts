@@ -2,7 +2,7 @@ import {provideRouter, RouterConfig}  from '@angular/router';
 import {Per10Component} from './per10.component';
 import {FullComponent} from './full.component';
 import {SDNComponent} from './sdn.component';
-
+import {PayComponent} from './pay.component';
 const routes: RouterConfig = [
   {
     path: '',
@@ -20,6 +20,10 @@ const routes: RouterConfig = [
   {
     path: 'sdn',
     component: SDNComponent
+  },
+  {
+    path: 'pay',
+    component: PayComponent
   }
 ];
 

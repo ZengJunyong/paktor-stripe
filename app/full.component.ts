@@ -10,7 +10,8 @@ import {count} from "rxjs/operator/count";
   templateUrl: 'price.table.html'
 })
 export class FullComponent extends StripeTableModel {
-  constructor() {
+  constructor(private router: Router) {
+    super(router);
     this.payments = [
       {amount: 775, itemName: 'GaiGai 1-dates package - No Installment'},
       {amount: 1980, itemName: 'GaiGai 3-dates package - No Installment'},
