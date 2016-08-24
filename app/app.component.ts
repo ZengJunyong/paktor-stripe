@@ -8,4 +8,5 @@ import {PaymentComponent} from './payment.component'
   directives: [PaymentComponent, ROUTER_DIRECTIVES]
 })
 export class AppComponent {
+  menu: number = 1;
 }

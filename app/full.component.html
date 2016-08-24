@@ -7,9 +7,11 @@
     <th>10 date package</th>
   </tr>
   <tr>
-    <td>No installment <my-payment></my-payment> </td>
+    <td>No installment</td>
     <td *ngFor="let payment of payments">
-      <my-payment [payment]="payment"></my-payment>
+      S${{payment.amount}}
+      <br>
+      <input type="image" src="app/images/buy-now.gif">
     </td>
   </tr>
   <tr>
