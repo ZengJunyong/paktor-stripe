@@ -1,6 +1,7 @@
-<p class="price">GaiGai 1-dates package - 10% OFF <br><span>$695.00 SGD</span></p>
-<p class="price">3 dates package - 10% discount - 3 months <br> $595.00 SGD for each month, for 3 instalments
-  <br><span>$595.00 SGD</span></p>
+<p class="price" *ngIf="!plan.count">{{plan.itemName}} <br><span>${{plan.amount}} SGD</span></p>
+<p class="price" *ngIf="plan.count">{{plan.itemName}} <br> ${{plan.amount}} SGD for each month, for {{plan.count}}
+  instalments
+  <br><span>${{plan.amount}} SGD</span></p>
 
 <form>
   <div class="form-group">
@@ -18,5 +19,4 @@
     <input type="text" size="4">
   </div>
   <input type="submit" class="btn btn-primary" value="Submit Payment">
-  <input type="button" class="btn btn-default" value="Back">
 </form>

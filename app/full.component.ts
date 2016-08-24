@@ -1,15 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {Payment} from './payment'
-import {StripeTableModel} from './stripe.table.model'
-import {Plan} from './plan'
-import {count} from "rxjs/operator/count";
+import {StripeTableComponent} from './stripe.table.component'
 
 @Component({
   moduleId: module.id,
   templateUrl: 'price.table.html'
 })
-export class FullComponent extends StripeTableModel {
+export class FullComponent extends StripeTableComponent {
   constructor(private router: Router) {
     super(router);
     this.payments = [

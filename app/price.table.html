@@ -20,7 +20,7 @@
     <td *ngFor="let plan of plans['3']">
       S${{plan.amount}}
       <br>
-      <input type="image" src="app/images/subscribe.gif">
+      <input (click)="choosePayment(plan)" type="image" src="app/images/subscribe.gif">
     </td>
   </tr>
   <tr>
@@ -29,7 +29,7 @@
     <td *ngFor="let plan of plans['6']">
       S${{plan.amount}}
       <br>
-      <input type="image" src="app/images/subscribe.gif">
+      <input (click)="choosePayment(plan)" type="image" src="app/images/subscribe.gif">
     </td>
   </tr>
 </table>

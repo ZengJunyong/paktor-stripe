@@ -1,16 +1,13 @@
 import {Payment} from './payment'
 import {Router} from '@angular/router';
-export class StripeTableModel {
+export class StripeTableComponent {
   payments: Payment[];
   plans;
-
-  payment: Payment;
 
   constructor(private router: Router) {
   }
 
   choosePayment(payment: Payment) {
-    this.payment = payment;
-    this.router.navigate(['/pay']);
+    this.router.navigate(['/pay', payment]);
   }
 }

@@ -1,16 +1,15 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-
-import {StripeTableModel} from './stripe.table.model'
-import {SDNComponent} from './sdn.component';
+import {StripeTableComponent} from './stripe.table.component'
 
 @Component({
   moduleId: module.id,
   templateUrl: 'price.table.html'
 })
-export class Per10Component extends StripeTableModel {
+export class Per10Component extends StripeTableComponent {
 
-  constructor() {
+  constructor(private router: Router) {
+    super(router);
     this.payments = [
       {amount: 695, itemName: 'GaiGai 1-dates package - 10% OFF'},
       {amount: 1785, itemName: 'GaiGai 3-dates package - 10% OFF'},

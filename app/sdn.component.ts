@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {Payment} from './payment'
-import {StripeTableModel} from './stripe.table.model'
+import {StripeTableComponent} from './stripe.table.component'
 import {Plan} from './plan'
 import {count} from "rxjs/operator/count";
 
@@ -9,8 +9,9 @@ import {count} from "rxjs/operator/count";
   moduleId: module.id,
   templateUrl: 'price.table.html'
 })
-export class SDNComponent extends StripeTableModel {
-  constructor() {
+export class SDNComponent extends StripeTableComponent {
+  constructor(private router: Router) {
+    super(router);
     this.payments = [
       {amount: 330, itemName: 'GaiGai 1-dates package'},
       {amount: 1485, itemName: 'GaiGai 3-dates package'},
