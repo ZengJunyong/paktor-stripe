@@ -7,8 +7,7 @@ import {count} from "rxjs/operator/count";
 
 @Component({
   moduleId: module.id,
-  selector: 'my-full',
-  templateUrl: 'stripe.table.component.html'
+  templateUrl: 'price.table.html'
 })
 export class FullComponent extends StripeTableModel {
   constructor() {
