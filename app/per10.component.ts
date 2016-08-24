@@ -8,7 +8,7 @@ import {StripeTableComponent} from './stripe.table.component'
 })
 export class Per10Component extends StripeTableComponent {
 
-  constructor(private router: Router) {
+  constructor(router: Router) {
     super(router);
     this.payments = [
       {amount: 695, itemName: 'GaiGai 1-dates package - 10% OFF'},

@@ -2,7 +2,7 @@ import {Payment} from './payment'
 import {Router} from '@angular/router';
 export class StripeTableComponent {
   payments: Payment[];
-  plans;
+  plans: any;
 
   constructor(private router: Router) {
   }

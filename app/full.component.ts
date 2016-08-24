@@ -7,7 +7,7 @@ import {StripeTableComponent} from './stripe.table.component'
   templateUrl: 'price.table.html'
 })
 export class FullComponent extends StripeTableComponent {
-  constructor(private router: Router) {
+  constructor(router: Router) {
     super(router);
     this.payments = [
       {amount: 775, itemName: 'GaiGai 1-dates package - No Installment'},
