@@ -2,14 +2,14 @@
 
 <div class="container">
   <ul class="nav nav-pills">
-    <li [ngClass]="{active:menu==1}" (click)="menu=1">
-      <a href="javascript:void(0)">FULL</a>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/full']">FULL</a>
     </li>
-    <li [ngClass]="{active:menu==2}" (click)="menu=2">
-      <a href="javascript:void(0)">10% OFF</a>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/per10']">10% OFF</a>
     </li>
-    <li [ngClass]="{active:menu==3}" (click)="menu=3">
-      <a href="javascript:void(0)">SDN</a>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/sdn']">SDN</a>
     </li>
   </ul>
   <router-outlet></router-outlet>
