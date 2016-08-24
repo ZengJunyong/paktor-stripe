@@ -14,7 +14,9 @@ export class PayComponent implements OnInit, OnDestroy {
   sub: any;
   plan: Plan;
 
-  card = {cardNumber: 4242424242424242, expMM: 10, expYY: 25, CVC: 983};
+  card = {cardNumber: '4242424242424242', expMM: 12, expYY: 2017, CVC: '123'};
+
+  success: any;
 
   constructor(private route: ActivatedRoute, private stripeService: StripeService) {
   }
@@ -26,7 +28,11 @@ export class PayComponent implements OnInit, OnDestroy {
   }
 
   submit() {
-    this.stripeService.pay(this.card).subscribe(result => console.log(result));
+    let obj: any = this.card; // any better method to join 2 objects in ng2?
+    obj.itemName = this.plan.itemName;
+    obj.amount = this.plan.amount;
+    obj.count = this.plan.count;
+    this.stripeService.pay(obj).subscribe(result => this.success = result.success);
   }
 
 

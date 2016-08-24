@@ -15,12 +15,9 @@ export class StripeService {
     let options = new RequestOptions({headers: headers});
 
     return this.http.post('http://localhost:4000/stripe', payment, options)
-      .map(this.extractData);
+      .map((res: Response) => res.json());
   }
 
-  private extractData(res: Response) {
-    let body = res.json();
-    return body.data || {};
-  }
+
 }
 
