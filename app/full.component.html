@@ -7,9 +7,9 @@
     <th>10 date package</th>
   </tr>
   <tr>
-    <td>No installment</td>
+    <td>No installment <my-payment></my-payment> </td>
     <td *ngFor="let payment of payments">
-      <sda></sda>
+      <my-payment [payment]="payment"></my-payment>
     </td>
   </tr>
   <tr>

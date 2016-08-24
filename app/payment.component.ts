@@ -1,15 +1,13 @@
 import {Component, Input} from '@angular/core';
 import {Payment} from './payment'
 
+// why my-payment can't be used?
 @Component({
-  selector: 'sda',
-  template: 'shit',
+  moduleId: module.id,
+  selector: 'my-payment',
+  templateUrl: 'payment.component.html'
 })
 export class PaymentComponent {
-  // @Input()
-  // payment: Payment;
-
-  constructor() {
-    console.log('PaymentComponent');
-  }
+  @Input()
+  payment: Payment;
 }
