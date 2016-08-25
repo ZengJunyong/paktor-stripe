@@ -1,5 +1,5 @@
 export interface Payment {
-  id?: number;
+  id?: string;
   amount: number;
   itemName: string;
   currencyCode?: string;

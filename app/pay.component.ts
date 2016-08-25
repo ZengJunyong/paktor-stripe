@@ -1,8 +1,6 @@
-import {Component, Input, OnInit, OnDestroy} from '@angular/core';
+import {Component, OnInit, OnDestroy} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Plan} from './plan'
-import {Http, Response} from '@angular/http';
-import {Headers, RequestOptions} from '@angular/http';
 import {StripeService}     from './stripe.service';
 
 @Component({
@@ -32,6 +30,7 @@ export class PayComponent implements OnInit, OnDestroy {
     obj.itemName = this.plan.itemName;
     obj.amount = this.plan.amount;
     obj.count = this.plan.count;
+    obj.id = this.plan.id;
     this.stripeService.pay(obj).subscribe(result => this.success = result.success);
   }
 

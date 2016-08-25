@@ -28,14 +28,14 @@ var Per10Component = (function (_super) {
         ];
         this.plans = {
             '3': [
-                { amount: 595, itemName: '3 dates package - 10% discount - 3 months', count: 3 },
-                { amount: 655, itemName: '5 dates package - 10% discount - 3 months', count: 3 },
-                { amount: 835, itemName: '10 dates package - 10% discount - 3 months', count: 3 }
+                { amount: 595, itemName: '3 dates package - 10% discount - 3 months', count: 3, id: 'per10-3-3' },
+                { amount: 655, itemName: '5 dates package - 10% discount - 3 months', count: 3, id: 'per10-5-3' },
+                { amount: 835, itemName: '10 dates package - 10% discount - 3 months', count: 3, id: 'per10-10-3' }
             ],
             '6': [
-                { amount: 297.5, itemName: '3 dates package - 10% discount - 6 months', count: 6 },
-                { amount: 327.5, itemName: '5 dates package - 10% discount - 6 months', count: 6 },
-                { amount: 417.5, itemName: '10 dates package - 10% discount - 6 months', count: 6 }
+                { amount: 297.5, itemName: '3 dates package - 10% discount - 6 months', count: 6, id: 'per10-3-6' },
+                { amount: 327.5, itemName: '5 dates package - 10% discount - 6 months', count: 6, id: 'per10-5-6' },
+                { amount: 417.5, itemName: '10 dates package - 10% discount - 6 months', count: 6, id: 'per10-10-6' }
             ]
         };
     }
