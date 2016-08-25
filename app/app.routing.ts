@@ -5,7 +5,7 @@ import {FullComponent} from './full.component';
 import {SDNComponent} from './sdn.component';
 import {PayComponent} from './pay.component';
 
-const routes: Routes = [
+const appRoutes: Routes = [
   {
     path: '',
     redirectTo: '/full',
@@ -27,10 +27,6 @@ const routes: Routes = [
     path: 'pay',
     component: PayComponent
   }
-];
-
-const appRoutes: Routes = [
-  ...routes
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);
