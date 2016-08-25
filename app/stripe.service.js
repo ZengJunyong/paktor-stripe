@@ -18,7 +18,7 @@ var StripeService = (function () {
     StripeService.prototype.pay = function (payment) {
         var headers = new http_2.Headers({ 'Content-Type': 'application/json' });
         var options = new http_2.RequestOptions({ headers: headers });
-        return this.http.post('http://127.0.0.1:4000/stripe', payment, options)
+        return this.http.post('http://letsgaigai.com/stripe', payment, options)
             .map(function (res) { return res.json(); });
     };
     StripeService = __decorate([
