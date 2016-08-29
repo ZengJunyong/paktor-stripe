@@ -21,14 +21,14 @@ var FullComponent = (function (_super) {
     function FullComponent(router) {
         _super.call(this, router);
         this.payments = [
-            { amount: 775, itemName: 'GaiGai 1-dates package - No Installment' },
+            { amount: 1, itemName: 'GaiGai 1-dates package - No Installment' },
             { amount: 1980, itemName: 'GaiGai 3-dates package - No Installment' },
             { amount: 2190, itemName: 'GaiGai 5-dates package - No Installment' },
             { amount: 2790, itemName: 'GaiGai 10-dates package - No Installment' }
         ];
         this.plans = {
             '3': [
-                { amount: 660, itemName: '3 dates package - 3 months', count: 3, id: 'full-3-3' },
+                { amount: 1, itemName: '3 dates package - 3 months', count: 3, id: 'live' },
                 { amount: 730, itemName: '5 dates package - 3 months', count: 3, id: 'full-5-3' },
                 { amount: 930, itemName: '10 dates package - 3 months', count: 3, id: 'full-10-3' }
             ],
