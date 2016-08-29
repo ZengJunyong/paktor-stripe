@@ -25,12 +25,13 @@ var PayComponent = (function () {
     };
     PayComponent.prototype.submit = function () {
         var _this = this;
+        this.progress = 2;
         var obj = this.card; // any better method to join 2 objects in ng2?
         obj.itemName = this.plan.itemName;
         obj.amount = this.plan.amount;
         obj.count = this.plan.count;
         obj.id = this.plan.id;
-        this.stripeService.pay(obj).subscribe(function (result) { return _this.success = result.success; });
+        this.stripeService.pay(obj).subscribe(function (result) { return _this.progress = result.success; });
     };
     PayComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();

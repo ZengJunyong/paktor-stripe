@@ -21,4 +21,6 @@
   <input (click)="submit()" type="submit" class="btn btn-primary" value="Submit Payment">
 </form>
 
-<p *ngIf="success" style="color: green;">Thanks for purchasing</p>
+<p *ngIf="progress==0" style="color: red;">Opps, something is wrong!</p>
+<p *ngIf="progress==1" style="color: green;">Thanks for purchasing</p>
+<p *ngIf="progress==2" style="color: blue;">Progressing...</p>
